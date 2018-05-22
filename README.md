@@ -1,12 +1,12 @@
 # nodejs-starter
-Basic User Authentication and Rest API example using MySql and NodeJs 
+Basic User Authentication and Rest API example using MySql and NodeJs. Steps to host on Heroku.
 
-# Following are the steps to follow to run the project.
+# Following are the steps to run the project.
   - Install NodeJs. [https://nodejs.org/en/download/]
   - Install MySql. [https://dev.mysql.com/downloads/installer/]
   - Add MySql configuration in : `mysql_config.json`
-  - run npm install
-  - run server.js
+  - Run `npm install` 
+  - Run  `node server.js`
 
 # Following are the APIS.
 - Register User
@@ -79,4 +79,19 @@ curl -XPOST -H 'Content-Type: application/json' 'http://localhost:5000/movie/rec
 "user_id":1
 }
 ```
+
+# Host on Heroku.
+
+You can host this website for free on heroku with limited functionality.
+
+- Follow the steps from heroku blog : https://devcenter.heroku.com/
+- You can use different functionality on heroku as a Addon. For MySql you can use `CleanDb` addon.
+- Once you use this addon you need to run `heroku config:add DATABASE_URL=mysql://b9569b90d54261:0a7276d4@us-cdbr-iron-east-04.cleardb.net/heroku_5aa751c5283805c?reconnect=true`. Since Heroku is using DBPATH from enviroment variable.
+- You can connect ClearDB with your own MySQl workbench and you can access your remote ClearDB. All information is given in this url : `mysql://b9569b90d54261:0a7276d4@us-cdbr-iron-east-04.cleardb.net/heroku_5aa751c5283805c`
+- HOST : `us-cdbr-iron-east-04.cleardb.net`
+- DBNAME: `heroku_5aa751c5283805c`
+- USER : `b9569b90d54261`
+- PASSWORD : `0a7276d4`
+
+
  
