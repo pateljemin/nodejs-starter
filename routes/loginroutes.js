@@ -10,10 +10,11 @@ var util = require('../util');
  */
 exports.register = function (req, res) {
   var today = new Date();
+  var salt = bcrypt.genSaltSync(10);
   var user = {
     "name": req.body.name,
     "email": req.body.email,
-    "password": bcrypt.hashSync(req.body.password, 10),
+    "password": bcrypt.hashSync(req.body.password, salt),
     "created": today,
     "modified": today
   }

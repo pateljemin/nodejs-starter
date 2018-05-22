@@ -2,8 +2,8 @@
 Basic User Authentication and Rest API example using MySql and NodeJs 
 
 # Following are the steps to follow to run the project.
-  - Intall NodeJs.
-  - Install MySql.
+  - Install NodeJs. [https://nodejs.org/en/download/]
+  - Install MySql. [https://dev.mysql.com/downloads/installer/]
   - Add MySql configuration in : `mysql_config.json`
   - run npm install
   - run server.js
