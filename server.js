@@ -51,4 +51,4 @@ app.post('/movie/like',movie.like);
 app.post('/movie/names',movie.names);
 app.post('/movie/recentlyliked',movie.recentlyLiked);
 
-app.listen(5000);
+app.listen(process.env.PORT || 5000);
