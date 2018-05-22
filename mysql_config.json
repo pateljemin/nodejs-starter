@@ -1,6 +1,6 @@
 {
-    "host"     : "localhost",
+    "host"     : "https://databases.000webhost.com/import.php",
     "user"     : "root",
     "password" : "password",
-    "database" : "grabbd"
+    "database" : "id5870154_grabbd"
 }
