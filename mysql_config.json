@@ -1,6 +1,6 @@
 {
-    "host"     : "https://databases.000webhost.com/import.php",
-    "user"     : "root",
-    "password" : "password",
-    "database" : "id5870154_grabbd"
+    "host"     : "us-cdbr-iron-east-04.cleardb.net",
+    "user"     : "b9569b90d54261",
+    "password" : "0a7276c4",
+    "database" : "heroku_5aa751c5283805c"
 }
