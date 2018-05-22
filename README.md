@@ -40,15 +40,29 @@ curl -XGET 'http://localhost:5000/logout'
 ```
 curl -XGET 'http://localhost:5000/movie?key=release_date'
 ```
+
 - Like the Movie. User id is given in body. Ideally it should be from session.
 
 ```
 curl -XPOST -H 'Content-Type: application/json' 'http://localhost:5000/movie/like' -d
 { 
 "id":341689,
-"user_id":1
+"user_id":1,
+"liked":1
 }
 ```
+
+- Unlike the Movie. 
+
+```
+curl -XPOST -H 'Content-Type: application/json' 'http://localhost:5000/movie/like' -d
+{ 
+"id":341689,
+"user_id":1,
+"liked":-1
+}
+```
+
 
 - Get User names who have liked the movie.
 ```

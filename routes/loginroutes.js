@@ -18,6 +18,13 @@ exports.register = function (req, res) {
     "created": today,
     "modified": today
   }
+  const result = mysql.syncConnection.query('SELECT email FROM users where email = ?', [req.body.email]);
+  if(result.length >=0){
+    res.send({
+      "code": 400,
+      "success": "Email Address already registered"
+    });
+  }
   mysql.pool.query('INSERT INTO users SET ?', user, function (error, results, fields) {
     if (error) {
       util.reportError(error, res);
@@ -73,5 +80,6 @@ exports.logout = function (req, res) {
   if (req.session) {
     req.session.reset();
   }
-  res.redirect('/login');
+  // Should redirect to login page from ui.
+  res.end();
 }
