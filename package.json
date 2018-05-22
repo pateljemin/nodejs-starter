@@ -1,0 +1,12 @@
+{
+  "name": "grabbd",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "^4.10.6",
+    "mysql": "^2.5.4",
+    "bcrypt-nodejs": "^0.0.3",
+    "body-parser": "^1.16.0",
+    "client-sessions": "^0.8.0",
+    "sync-mysql": "^3.0.1"
+  }
+}
