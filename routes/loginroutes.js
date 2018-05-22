@@ -70,6 +70,8 @@ exports.login = function (req, res) {
  * @param {*} res 
  */
 exports.logout = function (req, res) {
-  req.session.reset();
+  if (req.session) {
+    req.session.reset();
+  }
   res.redirect('/login');
 }
